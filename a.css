@@ -12,20 +12,32 @@ hr {
     border: none;
     border-top: 1px solid #DEDEDE;
 }
+
+ul, ol {
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
 .clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 .topNavBar {
     position: fixed;
     width: 100%;
     padding: 20px 0px;
 }
+
 .topNavBar nav {
     float: right;
     padding-top: 7px;
@@ -36,10 +48,12 @@ a {
     margin: 0;
     padding: 0;
 }
+
 .topNavBar nav>ul>li {
     float: right;
     margin: 0px 17px;
 }
+
 .topNavBar nav>ul>li>a {
     display: block;
     font-size: 12px;
@@ -50,9 +64,11 @@ a {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
 }
+
 .topNavBar nav>ul>li>a:hover {
     border-bottom: 3px solid #e06567;
 }
+
 .topNavBar .logo {
     float: left;
     padding-top: 3px;
@@ -83,11 +99,11 @@ a {
 }
 
 .userCard {
-    border: 1px solid red;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
 .userCard .welcome {
@@ -99,6 +115,7 @@ a {
     position: relative;
     margin-bottom: 10px;
 }
+
 .userCard .welcome .triangle {
     border: 10px solid transparent;
     border-top-width: 0px;
@@ -129,6 +146,7 @@ a {
 .userCard .pictureAndText {
     padding: 50px;
 }
+
 .userCard dl dt,
 .userCard dl dd {
   padding: 7px 0px;
@@ -138,8 +156,8 @@ a {
   float: left;
   width: 30%;
   font-weight: bold;
-
 }
+
 .userCard dl dd {
   float: left;
   width: 70%;
@@ -150,6 +168,7 @@ a {
     background: #D96E6E;
     text-align: center;
 }
+
 .userCard footer a {
     display: inline-block;
     border-radius: 50%;
@@ -157,12 +176,95 @@ a {
     padding: 5px 5px;
     margin: 16px;
 }
+
 .userCard footer a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
 .userCard footer svg {
   width: 30px;
   height: 30px;
   fill: white;
   vertical-align: top;
+}
+body > main .downloadResume-wrapper {
+  text-align: center;
+}
+
+body > main .downloadResume {
+  font-size: 15px;
+  /* font-family: "Open Sans"; */
+  line-height: 16px;
+  font-weight: bold;
+  padding: 21px 55px;
+  border: 1px solid #CBCDCF;
+  background: #EFEFEF;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 32px 0px;
+  transition: box-shadow 0.3s;
+}
+body > main .downloadResume:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
+}
+
+body>main .selfIntroduction {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: kai;
+    font-size: 18px;
+}
+
+section.skills {
+    max-width: 940px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.skills h2 {
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+
+section.skills > ol {
+    margin-top: 30px;
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    padding: 42px 50px 10px;
+} 
+
+section.skills > ol > li {
+    float: left;
+    background: white;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+section.skills > ol > li:nth-child(odd) {
+    padding-right: 40px;
+} 
+
+section.skills > ol h3 {
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+div.processBar {
+    background-color: #F7E2E2;
+    height: 5px;
+    border-radius: 2px;
+    margin: 4px 0px 40px 0px;
+}
+
+div.processBar .process {
+    background: #e8676b;
+    width: 70%;
+    height: 5px;
+    border-radius: 2px;
 }
