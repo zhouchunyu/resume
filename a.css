@@ -224,7 +224,16 @@ section.skills {
     margin-right: auto;
 }
 
-section.skills h2 {
+section.portfolio {
+    max-width: 940px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+section.skills h2,
+section.portfolio h2 {
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
@@ -233,7 +242,7 @@ section.skills h2 {
 }
 
 section.skills > ol {
-    margin-top: 30px;
+    margin-top: 50px;
     background: white;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
     padding: 42px 50px 10px;
@@ -267,4 +276,66 @@ div.processBar .process {
     width: 70%;
     height: 5px;
     border-radius: 2px;
+}
+
+section.portfolio nav {
+    margin-top: 43px;
+    display: inline-block;
+}
+section.portfolio nav > ol {
+    vertical-align: top;
+}
+
+section.portfolio nav > ol > li {
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+section.portfolio nav > ol > li:first-child {
+    margin-left: 0px;
+}
+
+section.portfolio nav .bar {
+    height: 5px;
+    background: white;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+section.portfolio nav .bar .bar-inner {
+    background: #D96E6E;
+    height: 5px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+section.portfolio nav .bar.state-1 .bar-inner{
+    margin-left: 0px;
+    width: 40px;
+}
+
+section.portfolio nav .bar.state-2 .bar-inner{
+    margin-left: 63px;
+    width: 49px;
+}
+
+section.portfolio nav .bar.state-3 .bar-inner{
+    margin-left: 134px;
+    width: 55px;
+}
+
+section.portfolio .works {
+    height: 597px;
+}
+
+section.portfolio .works {
+    margin-top: 41px;
+    height: 597px;
+    position: relative;
+}
+
+section.portfolio .works > .big,
+section.portfolio .works > .small {
+    position: absolute;
 }
