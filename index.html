@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>周春雨的简历</title>
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="main.css">
     <script src="//at.alicdn.com/t/font_629625_age5eo310k5fusor.js"></script>
     <style type="text/css">
         .icon {
@@ -17,7 +18,13 @@
     </style>
 </head>
 <body>
-    <div class="topNavBar">
+    <div id="siteLoading" class="site-loading active">
+        <div class="loading">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div id="topNavbar" class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a href="#" class="logo" alt="logo">
                 <span class='rs'>Rs</span><span class='card'>card</span>
@@ -161,6 +168,20 @@
             }
             portfolioVallina.onclick = function(){
                 portfolioBar.className = 'bar state-3'
+            }
+        </script>
+        <script>
+            //loading
+            setTimeout(function(){
+                siteLoading.classList.remove('active');
+            }, 1000)
+
+            window.onscroll = function(event){
+                if(window.scrollY > 0){
+                    topNavbar.classList.add("sticky");
+                } else{
+                    topNavbar.classList.remove("sticky");
+                }
             }
         </script>
     </main>
