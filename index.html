@@ -33,8 +33,13 @@
                 <ul class='clearfix'>
                     <li ><a href="#selfIntroduction">关于</a></li>
                     <li ><a href="#skills">技能</a></li>
-                    <li ><a href="#">作品</a></li>
-                    <li ><a href="#">博客</a></li>
+                    <li class="menuTrigger">
+                        <a href="#">作品</a>
+                        <ul class="submenu">
+                            <li><a href="//zhouchunyu.github.io/bookmarks/" target="_blank">网站导航</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="//zhouchunyu.github.io/" target="_blank">博客</a></li>
                     <li ><a href="#">日历</a></li>
                     <li ><a href="#">联系方式</a></li>
                     <li ><a href="#">其他</a></li>
@@ -182,6 +187,21 @@
                 } else{
                     topNavbar.classList.remove("sticky");
                 }
+            }
+            lis = document.getElementsByClassName("menuTrigger");
+            for(let i = 0; i < lis.length; i++){
+                lis[i].onmouseenter = function(event){
+                    let li = event.currentTarget;
+                    let ul = li.getElementsByTagName("ul")[0];
+                    ul.classList.add("active");
+                    console.log("in");
+                } 
+                lis[i].parentElement.onmouseleave = function(event){
+                    let li = event.currentTarget;
+                    let ul = li.getElementsByTagName("ul")[0];
+                    ul.classList.remove("active");
+                    console.log("out");
+                } 
             }
         </script>
     </main>
