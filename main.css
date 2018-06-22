@@ -89,18 +89,6 @@ a {
     animation: menuSlide 1s;
 }
 
-.topNavBar .submenu{
-    display: none;
-}
-
-.topNavBar .submenu.active{
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-size: 12px;
-}
-
 .topNavBar .submenu>li{
     white-space: nowrap;
 }
@@ -112,6 +100,19 @@ a {
     100%{
         transform: translateX(0);
     }
+}
+
+.topNavBar .submenu{
+    display: none;
+}
+
+.topNavBar .submenu.active{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+    animation: menuSlide 1s;
 }
 
 .topNavBar .logo {

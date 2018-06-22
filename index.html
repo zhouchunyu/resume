@@ -196,7 +196,7 @@
                     ul.classList.add("active");
                     console.log("in");
                 } 
-                lis[i].parentElement.onmouseleave = function(event){
+                lis[i].onmouseleave = function(event){
                     let li = event.currentTarget;
                     let ul = li.getElementsByTagName("ul")[0];
                     ul.classList.remove("active");
