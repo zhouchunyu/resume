@@ -204,8 +204,7 @@
                     let aTag = x.currentTarget;
                     let href = aTag.getAttribute('href');
                     target = document.querySelector(href);
-                    top = target.offsetTop;
-                    scrollTo(0, top - 80);
+                    window.scrollTo(0, target.offsetTop - 80);
                 }
             }
         </script>
