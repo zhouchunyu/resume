@@ -89,6 +89,18 @@ a {
     animation: menuSlide 1s;
 }
 
+.topNavBar nav>ul>li>a.active::after {
+    content: '';
+    background: #e06567;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    animation: menuSlide 1s;
+}
+
 .topNavBar .submenu>li{
     white-space: nowrap;
 }
