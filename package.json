@@ -1,0 +1,19 @@
+{
+  "name": "local_resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouchunyu/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhouchunyu/resume/issues"
+  },
+  "homepage": "https://github.com/zhouchunyu/resume#readme"
+}
