@@ -164,74 +164,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_629625_age5eo310k5fusor.js"></script>
+    <script src="loading.js"></script>
     <script src="init_swiper.js"></script>
-    <script>
-        //loading
-        setTimeout(function(){
-            siteLoading.classList.remove('active');
-        }, 1000)
-
-        window.onscroll = function(event){
-            if(window.scrollY > 0){
-                topNavbar.classList.add("sticky");
-            } else{
-                topNavbar.classList.remove("sticky");
-            }
-            scrollableTags = document.querySelectorAll("[data-scrollY]");
-            minIndex = 0;
-            for(var i = 1; i < scrollableTags.length; i++){
-                if(Math.abs(scrollableTags[i].offsetTop - window.scrollY) < Math.abs(scrollableTags[minIndex].offsetTop - window.scrollY)){
-                    minIndex = i;
-                }
-            }
-            aTag = document.querySelector(`a[href="#${scrollableTags[minIndex].id}"]`);
-            aTags = document.querySelectorAll(".topNavBar nav>ul>li>a");
-            for(var i=0; i<aTags.length; i++){
-                aTags[i].classList.remove("active");
-            }
-            aTag.classList.add("active");
-        }
-        lis = document.getElementsByClassName("menuTrigger");
-        for(let i = 0; i < lis.length; i++){
-            lis[i].onmouseenter = function(event){
-                let li = event.currentTarget;
-                let ul = li.getElementsByTagName("ul")[0];
-                ul.classList.add("active");
-            } 
-            lis[i].onmouseleave = function(event){
-                let li = event.currentTarget;
-                let ul = li.getElementsByTagName("ul")[0];
-                ul.classList.remove("active");
-            }
-        }
-        aTags = document.querySelectorAll(".topNavBar nav>ul>li.scrollable>a");
-        for(let i = 0; i < aTags.length; i++){
-            aTags[i].onclick = function(x){
-                x.preventDefault();
-                let aTag = x.currentTarget;
-                let href = aTag.getAttribute('href');
-                target = document.querySelector(href);
-                animate_scrollTo(window.scrollY, target.offsetTop - 80);
-            }
-        }
-
-        function animate(time) {
-            requestAnimationFrame(animate);
-            TWEEN.update(time);
-        }
-        requestAnimationFrame(animate);
-
-        function animate_scrollTo(y_start, y_target){
-            var coords = {y: y_start};
-            var tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
-            .to({y: y_target }, 500) // Move to (300, 200) in 1 second.
-            .easing(TWEEN.Easing.Quadratic.In) // Use an easing function to make the animation smooth.
-            .onUpdate(function() { // Called after tween.js updates 'coords'.
-                // Move 'box' to the position described by 'coords' with a CSS translation.
-                window.scrollTo(0, coords.y);
-            })
-            .start();
-        }
-    </script>
+    <script src="sticky-topbar.js"></script>
+    <script src="navigation-scroll.js"></script>
 </body>
 </html>
