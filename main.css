@@ -399,8 +399,8 @@ section.portfolio .works > .small {
 .swiper-container {
     margin-top: 30px;
 }
-.swiper-container img {
-  width: 600px;
+.swiper-slide >a >img {
+  width: 750px;
 }
 .swiper-button-prev {
     height: 64px;
