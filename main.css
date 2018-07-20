@@ -49,18 +49,17 @@ a {
 }
 
 .topNavBar nav {
-    float: right;
     padding-top: 7px;
 }
 
 .topNavBar nav>ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .topNavBar nav>ul>li {
-    float: right;
     margin: 0px 17px;
     position: relative;
 }
@@ -128,7 +127,7 @@ a {
 }
 
 .topNavBar .logo {
-    float: left;
+    
     padding-top: 3px;
     padding-bottom: 4px;
     font-size: 24px;
@@ -154,6 +153,8 @@ a {
 
 .topNavBar-inner {
     padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .userCard {
