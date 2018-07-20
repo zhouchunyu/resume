@@ -395,3 +395,22 @@ section.portfolio .works > .big,
 section.portfolio .works > .small {
     position: absolute;
 }
+
+.swiper-container {
+    margin-top: 30px;
+}
+.swiper-container img {
+  width: 600px;
+}
+.swiper-button-prev {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: white;
+}
+.swiper-button-next {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: white;
+}
