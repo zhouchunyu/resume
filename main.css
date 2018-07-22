@@ -414,3 +414,28 @@ section.portfolio .works > .small {
     border-radius: 50%;
     background-color: white;
 }
+
+section {
+    max-width: 940px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    background: #f4f4f4;
+}
+
+.messages-content > ul {
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 1px solid #DDD
+}
+
+.messages-content > ul > li{
+    padding: 16px;
+    border-bottom: 1px solid #DDD
+}
+
+.messages > form {
+    max-width: 700px;
+    margin: 0 auto;
+}
